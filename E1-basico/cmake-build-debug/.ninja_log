@@ -1,0 +1,6 @@
+# ninja log v5
+0	261	7054562401746014	build.ninja	c5bdfc5d38f52e2b
+5	549	7054551622246578	CMakeFiles/E1_basico.dir/hello_triangle.cpp.obj	b41d47e132036bbd
+490	709	7054547350155629	E1_basico.exe	4b6a1391a75a31f9
+1	490	7054547348004869	CMakeFiles/E1_basico.dir/main.cpp.obj	5df01e9e2f80eb14
+2	905	7054557344361678	CMakeFiles/E1_basico.dir/glad.c.obj	fac3cdf09ccae679

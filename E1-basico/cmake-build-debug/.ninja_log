@@ -4,3 +4,11 @@
 490	709	7054547350155629	E1_basico.exe	4b6a1391a75a31f9
 1	490	7054547348004869	CMakeFiles/E1_basico.dir/main.cpp.obj	5df01e9e2f80eb14
 2	905	7054557344361678	CMakeFiles/E1_basico.dir/glad.c.obj	fac3cdf09ccae679
+1	1783	7054564278489612	CMakeFiles/E1_basico.dir/glad.c.obj	fac3cdf09ccae679
+1784	2108	7054564281619890	E1_basico.exe	21627dface3e472
+2	591	7054565373915328	CMakeFiles/E1_basico.dir/hello_triangle.cpp.obj	b41d47e132036bbd
+8	979	7054565377785288	CMakeFiles/E1_basico.dir/glad.c.obj	fac3cdf09ccae679
+979	1311	7054565380976557	E1_basico.exe	21627dface3e472
+1	603	7054566009437572	CMakeFiles/E1_basico.dir/hello_triangle.cpp.obj	b41d47e132036bbd
+8	1002	7054566013427517	CMakeFiles/E1_basico.dir/glad.c.obj	fac3cdf09ccae679
+1002	1308	7054566016367567	E1_basico.exe	21627dface3e472

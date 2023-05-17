@@ -49,8 +49,8 @@ cmake_ninja_workdir = D$:/CG-2023/2023-1-Rasterizacion/E1-basico/cmake-build-deb
 
 build cmake_object_order_depends_target_E1_basico: phony || CMakeFiles/E1_basico.dir
 
-build CMakeFiles/E1_basico.dir/hello_triangle.cpp.obj: CXX_COMPILER__E1_basico_Debug D$:/CG-2023/2023-1-Rasterizacion/E1-basico/hello_triangle.cpp || cmake_object_order_depends_target_E1_basico
-  DEP_FILE = CMakeFiles\E1_basico.dir\hello_triangle.cpp.obj.d
+build CMakeFiles/E1_basico.dir/hello_triangle_indexed.cpp.obj: CXX_COMPILER__E1_basico_Debug D$:/CG-2023/2023-1-Rasterizacion/E1-basico/hello_triangle_indexed.cpp || cmake_object_order_depends_target_E1_basico
+  DEP_FILE = CMakeFiles\E1_basico.dir\hello_triangle_indexed.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++17
   OBJECT_DIR = CMakeFiles\E1_basico.dir
   OBJECT_FILE_DIR = CMakeFiles\E1_basico.dir
@@ -69,7 +69,7 @@ build CMakeFiles/E1_basico.dir/glad.c.obj: C_COMPILER__E1_basico_Debug D$:/CG-20
 #############################################
 # Link the executable E1_basico.exe
 
-build E1_basico.exe: CXX_EXECUTABLE_LINKER__E1_basico_Debug CMakeFiles/E1_basico.dir/hello_triangle.cpp.obj CMakeFiles/E1_basico.dir/glad.c.obj
+build E1_basico.exe: CXX_EXECUTABLE_LINKER__E1_basico_Debug CMakeFiles/E1_basico.dir/hello_triangle_indexed.cpp.obj CMakeFiles/E1_basico.dir/glad.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lOpenGL32  -lGLU32  -lfreeGLUT  -lglfw3  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\E1_basico.dir
@@ -78,6 +78,84 @@ build E1_basico.exe: CXX_EXECUTABLE_LINKER__E1_basico_Debug CMakeFiles/E1_basico
   TARGET_FILE = E1_basico.exe
   TARGET_IMPLIB = libE1_basico.dll.a
   TARGET_PDB = E1_basico.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target E2_ShadersUniform
+
+
+#############################################
+# Order-only phony target for E2_ShadersUniform
+
+build cmake_object_order_depends_target_E2_ShadersUniform: phony || CMakeFiles/E2_ShadersUniform.dir
+
+build CMakeFiles/E2_ShadersUniform.dir/shaders_uniform.cpp.obj: CXX_COMPILER__E2_ShadersUniform_Debug D$:/CG-2023/2023-1-Rasterizacion/E1-basico/shaders_uniform.cpp || cmake_object_order_depends_target_E2_ShadersUniform
+  DEP_FILE = CMakeFiles\E2_ShadersUniform.dir\shaders_uniform.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = CMakeFiles\E2_ShadersUniform.dir
+  OBJECT_FILE_DIR = CMakeFiles\E2_ShadersUniform.dir
+
+build CMakeFiles/E2_ShadersUniform.dir/glad.c.obj: C_COMPILER__E2_ShadersUniform_Debug D$:/CG-2023/2023-1-Rasterizacion/E1-basico/glad.c || cmake_object_order_depends_target_E2_ShadersUniform
+  DEP_FILE = CMakeFiles\E2_ShadersUniform.dir\glad.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\E2_ShadersUniform.dir
+  OBJECT_FILE_DIR = CMakeFiles\E2_ShadersUniform.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target E2_ShadersUniform
+
+
+#############################################
+# Link the executable E2_ShadersUniform.exe
+
+build E2_ShadersUniform.exe: CXX_EXECUTABLE_LINKER__E2_ShadersUniform_Debug CMakeFiles/E2_ShadersUniform.dir/shaders_uniform.cpp.obj CMakeFiles/E2_ShadersUniform.dir/glad.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lOpenGL32  -lGLU32  -lfreeGLUT  -lglfw3  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\E2_ShadersUniform.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = E2_ShadersUniform.exe
+  TARGET_IMPLIB = libE2_ShadersUniform.dll.a
+  TARGET_PDB = E2_ShadersUniform.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target E3_ShaderClass
+
+
+#############################################
+# Order-only phony target for E3_ShaderClass
+
+build cmake_object_order_depends_target_E3_ShaderClass: phony || CMakeFiles/E3_ShaderClass.dir
+
+build CMakeFiles/E3_ShaderClass.dir/shader/shaders_class.cpp.obj: CXX_COMPILER__E3_ShaderClass_Debug D$:/CG-2023/2023-1-Rasterizacion/E1-basico/shader/shaders_class.cpp || cmake_object_order_depends_target_E3_ShaderClass
+  DEP_FILE = CMakeFiles\E3_ShaderClass.dir\shader\shaders_class.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = CMakeFiles\E3_ShaderClass.dir
+  OBJECT_FILE_DIR = CMakeFiles\E3_ShaderClass.dir\shader
+
+build CMakeFiles/E3_ShaderClass.dir/glad.c.obj: C_COMPILER__E3_ShaderClass_Debug D$:/CG-2023/2023-1-Rasterizacion/E1-basico/glad.c || cmake_object_order_depends_target_E3_ShaderClass
+  DEP_FILE = CMakeFiles\E3_ShaderClass.dir\glad.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\E3_ShaderClass.dir
+  OBJECT_FILE_DIR = CMakeFiles\E3_ShaderClass.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target E3_ShaderClass
+
+
+#############################################
+# Link the executable E3_ShaderClass.exe
+
+build E3_ShaderClass.exe: CXX_EXECUTABLE_LINKER__E3_ShaderClass_Debug CMakeFiles/E3_ShaderClass.dir/shader/shaders_class.cpp.obj CMakeFiles/E3_ShaderClass.dir/glad.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lOpenGL32  -lGLU32  -lfreeGLUT  -lglfw3  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\E3_ShaderClass.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = E3_ShaderClass.exe
+  TARGET_IMPLIB = libE3_ShaderClass.dll.a
+  TARGET_PDB = E3_ShaderClass.exe.dbg
 
 
 #############################################
@@ -107,6 +185,10 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build E1_basico: phony E1_basico.exe
 
+build E2_ShadersUniform: phony E2_ShadersUniform.exe
+
+build E3_ShaderClass: phony E3_ShaderClass.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -115,7 +197,7 @@ build E1_basico: phony E1_basico.exe
 #############################################
 # Folder: D:/CG-2023/2023-1-Rasterizacion/E1-basico/cmake-build-debug
 
-build all: phony E1_basico.exe
+build all: phony E1_basico.exe E2_ShadersUniform.exe E3_ShaderClass.exe
 
 # =============================================================================
 # Built-in targets

@@ -12,5 +12,5 @@ target_link_libraries(E2_ShadersUniform -lOpenGL32 -lGLU32 -lfreeGLUT -lglfw3)
 add_executable(E3_ShaderClass shader/shaders_class.cpp glad.c)
 target_link_libraries(E3_ShaderClass -lOpenGL32 -lGLU32 -lfreeGLUT -lglfw3)
 
-add_executable(E5_Transformations shader/transformations.cpp shader/stb_image.cpp glad.c)
+add_executable(E5_Transformations shader/transformations.cpp glad.c)
 target_link_libraries(E5_Transformations -lOpenGL32 -lGLU32 -lfreeGLUT -lglfw3)

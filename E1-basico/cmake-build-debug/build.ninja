@@ -157,6 +157,51 @@ build E3_ShaderClass.exe: CXX_EXECUTABLE_LINKER__E3_ShaderClass_Debug CMakeFiles
   TARGET_IMPLIB = libE3_ShaderClass.dll.a
   TARGET_PDB = E3_ShaderClass.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target E5_Transformations
+
+
+#############################################
+# Order-only phony target for E5_Transformations
+
+build cmake_object_order_depends_target_E5_Transformations: phony || CMakeFiles/E5_Transformations.dir
+
+build CMakeFiles/E5_Transformations.dir/shader/transformations.cpp.obj: CXX_COMPILER__E5_Transformations_Debug D$:/CG-2023/2023-1-Rasterizacion/E1-basico/shader/transformations.cpp || cmake_object_order_depends_target_E5_Transformations
+  DEP_FILE = CMakeFiles\E5_Transformations.dir\shader\transformations.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = CMakeFiles\E5_Transformations.dir
+  OBJECT_FILE_DIR = CMakeFiles\E5_Transformations.dir\shader
+
+build CMakeFiles/E5_Transformations.dir/shader/stb_image.cpp.obj: CXX_COMPILER__E5_Transformations_Debug D$:/CG-2023/2023-1-Rasterizacion/E1-basico/shader/stb_image.cpp || cmake_object_order_depends_target_E5_Transformations
+  DEP_FILE = CMakeFiles\E5_Transformations.dir\shader\stb_image.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = CMakeFiles\E5_Transformations.dir
+  OBJECT_FILE_DIR = CMakeFiles\E5_Transformations.dir\shader
+
+build CMakeFiles/E5_Transformations.dir/glad.c.obj: C_COMPILER__E5_Transformations_Debug D$:/CG-2023/2023-1-Rasterizacion/E1-basico/glad.c || cmake_object_order_depends_target_E5_Transformations
+  DEP_FILE = CMakeFiles\E5_Transformations.dir\glad.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\E5_Transformations.dir
+  OBJECT_FILE_DIR = CMakeFiles\E5_Transformations.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target E5_Transformations
+
+
+#############################################
+# Link the executable E5_Transformations.exe
+
+build E5_Transformations.exe: CXX_EXECUTABLE_LINKER__E5_Transformations_Debug CMakeFiles/E5_Transformations.dir/shader/transformations.cpp.obj CMakeFiles/E5_Transformations.dir/shader/stb_image.cpp.obj CMakeFiles/E5_Transformations.dir/glad.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lOpenGL32  -lGLU32  -lfreeGLUT  -lglfw3  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\E5_Transformations.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = E5_Transformations.exe
+  TARGET_IMPLIB = libE5_Transformations.dll.a
+  TARGET_PDB = E5_Transformations.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -189,6 +234,8 @@ build E2_ShadersUniform: phony E2_ShadersUniform.exe
 
 build E3_ShaderClass: phony E3_ShaderClass.exe
 
+build E5_Transformations: phony E5_Transformations.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -197,7 +244,7 @@ build E3_ShaderClass: phony E3_ShaderClass.exe
 #############################################
 # Folder: D:/CG-2023/2023-1-Rasterizacion/E1-basico/cmake-build-debug
 
-build all: phony E1_basico.exe E2_ShadersUniform.exe E3_ShaderClass.exe
+build all: phony E1_basico.exe E2_ShadersUniform.exe E3_ShaderClass.exe E5_Transformations.exe
 
 # =============================================================================
 # Built-in targets

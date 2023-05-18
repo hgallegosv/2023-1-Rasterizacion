@@ -1,5 +1,6 @@
 # ninja log v5
-1	272	7060631218532901	build.ninja	c5bdfc5d38f52e2b
+0	255	7061484720322899	build.ninja	c5bdfc5d38f52e2b
+940	1259	7060631260257307	E3_ShaderClass.exe	def1b1d94ddd6b49
 1	575	7060600843146219	CMakeFiles/E1_basico.dir/hello_triangle.cpp.obj	b41d47e132036bbd
 570	876	7060614316484945	E1_basico.exe	ed951dc9dea5cddd
 1	490	7054547348004869	CMakeFiles/E1_basico.dir/main.cpp.obj	5df01e9e2f80eb14
@@ -13,4 +14,12 @@
 929	1256	7060630518106639	ShaderClass.exe	dbe1db87af80f48c
 0	615	7060631253946918	CMakeFiles/E3_ShaderClass.dir/shader/shaders_class.cpp.obj	63685fe33addf49a
 6	940	7060631257187275	CMakeFiles/E3_ShaderClass.dir/glad.c.obj	298d9494a531033d
-940	1259	7060631260257307	E3_ShaderClass.exe	def1b1d94ddd6b49
+1	939	7061483096784386	CMakeFiles/E5_Transformations.dir/shader/transformations.cpp.obj	5937228a09068697
+7	1034	7061483097724428	CMakeFiles/E5_Transformations.dir/glad.c.obj	d26bbfdeec5b72c
+0	252	7061484720322899	build.ninja	c5bdfc5d38f52e2b
+2	725	7061484727913091	CMakeFiles/E5_Transformations.dir/shader/stb_image.cpp.obj	caa97a038db2f33
+726	1047	7061484730973124	E5_Transformations.exe	d110b3b609442626
+2	989	7061493289172230	CMakeFiles/E5_Transformations.dir/shader/transformations.cpp.obj	5937228a09068697
+989	1325	7061493292392284	E5_Transformations.exe	d110b3b609442626
+3	964	7061493705065258	CMakeFiles/E5_Transformations.dir/shader/transformations.cpp.obj	5937228a09068697
+964	1289	7061493708166126	E5_Transformations.exe	d110b3b609442626

@@ -5,3 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(E2_Iluminacion 2.1.basic_lighting_diffuse/basic_lighting_diffuse.cpp glad.c)
 target_link_libraries(E2_Iluminacion -lOpenGL32 -lGLU32 -lfreeGLUT -lglfw3)
+
+add_executable(E2_Iluminacion_tetraedro 2.1.basic_lighting_diffuse/basic_lighting_diffuse_tetraedro.cpp glad.c)
+target_link_libraries(E2_Iluminacion_tetraedro -lOpenGL32 -lGLU32 -lfreeGLUT -lglfw3)

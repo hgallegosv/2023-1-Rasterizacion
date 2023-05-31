@@ -6,6 +6,9 @@ E1-basico/cmake-build-debug/*
 
 E2-Iluminacion/.idea/*
 E2-Iluminacion/cmake-build-debug/*
+
+E3-Objetos/.idea/*
+E3-Objetos/cmake-build-debug/*
 # Prerequisites
 *.d
 

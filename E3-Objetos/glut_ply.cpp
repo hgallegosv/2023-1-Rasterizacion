@@ -122,7 +122,7 @@ int Model_PLY::enviar_GPU() {
 
 void Model_PLY::display(Shader &sh) {
     model = mat4(1.0);
-    model = scale(model, vec3(10));
+    model = scale(model, vec3(20));
     model = translate(model, centro);
     sh.setMat4("model", model);
     if (true) {

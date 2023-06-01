@@ -35,7 +35,7 @@ float tiempoInicial = 0.0f, tiempoTranscurrido = 0.0f;
 // lighting
 glm::vec3 lightPos(1.2f, 30.0f, 2.0f);
 
-Esfera esfera(vec3(0),2., 30, 30);
+Esfera esfera(vec3(0),2., 20, 20);
 Objeto *pEsfera = new Esfera(vec3(0),2, 50, 50);
 Model_PLY modelo;
 vector<Objeto*> objetos;
@@ -153,9 +153,10 @@ void processInput(GLFWwindow *window) {
         camera.ProcessKeyboard(LEFT, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         camera.ProcessKeyboard(RIGHT, deltaTime);
-    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_RELEASE){
+    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS){
         Objeto *pE = new Esfera(glm::vec3(rand()%10, rand()%10, rand()%10));
         pE->vao = esfera.vao;
+        pE->indices_size = esfera.indices_size;
         objetos.emplace_back(pE);
     }
 

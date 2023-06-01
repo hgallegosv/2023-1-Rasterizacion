@@ -39,6 +39,7 @@ Esfera esfera(vec3(0),2., 20, 20);
 Objeto *pEsfera = new Esfera(vec3(0),2, 50, 50);
 Model_PLY modelo;
 vector<Objeto*> objetos;
+bool boton_presionado = false;
 
 int main() {
     char *archivo = "../models/bunny.ply";
@@ -86,7 +87,7 @@ int main() {
     pEsfera->vao = esfera.vao;
     modelo.setup();
 
-    objetos.emplace_back(pEsfera);
+    //objetos.emplace_back(pEsfera);
 
     // render loop
     while (!glfwWindowShouldClose(window)) {
@@ -121,6 +122,7 @@ int main() {
         //esfera.display(lightingShader);
         //pEsfera->display(lightingShader);
         for (auto &obj : objetos) {
+            obj->actualizarPosicion(tiempoTranscurrido);
             obj->display(lightingShader);
         }
         modelo.display(lightingShader);
@@ -154,10 +156,25 @@ void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         camera.ProcessKeyboard(RIGHT, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS){
-        Objeto *pE = new Esfera(glm::vec3(rand()%10, rand()%10, rand()%10));
-        pE->vao = esfera.vao;
-        pE->indices_size = esfera.indices_size;
-        objetos.emplace_back(pE);
+        boton_presionado = true;
+    }
+    if (glfwGetKey(window, GLFW_KEY_E) == GLFW_RELEASE){
+        if (boton_presionado) {
+            float x = rand()%10;
+            float y = rand()%10;
+            float z = rand()%10;
+            Objeto *pE = new Esfera(glm::vec3(x,y,z));
+            pE->v0 = 20;
+            pE->a0 = 40 + rand() % 20;
+            pE->x0 = x;
+            pE->y0 = y;
+            pE->vao = esfera.vao;
+            pE->indices_size = esfera.indices_size;
+            objetos.emplace_back(pE);
+            boton_presionado = false;
+            //cout << endl << x << " " << y << " " << z << " " << pE->a0;
+            tiempoInicial = static_cast<float>(glfwGetTime());
+        }
     }
 
 }

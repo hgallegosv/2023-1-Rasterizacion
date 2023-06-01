@@ -72,6 +72,7 @@ GLuint Esfera::setup() {
 void Esfera::display(Shader &sh){
     model = mat4(1.0);
     model = scale(model, vec3(0.5));
+    //cout << endl << to_string(centro);
     model = translate(model, centro);
     sh.setMat4("model", model);
     if (visible) {
@@ -79,4 +80,12 @@ void Esfera::display(Shader &sh){
         glDrawElements(GL_TRIANGLES, indices_size, GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
     }
+}
+void Esfera::actualizarPosicion(int t) {
+    float g = 9.8;
+    float theta = radians(a0);
+    xt = x0 + v0 * cos(theta) * t;
+    yt = y0 + v0 * sin(theta) * t - 0.5 * g * t * t;
+    centro.x = xt;
+    centro.y = yt;
 }

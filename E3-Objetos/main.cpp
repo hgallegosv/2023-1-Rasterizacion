@@ -95,7 +95,7 @@ int main() {
         float currentFrame = static_cast<float>(glfwGetTime());
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
-        tiempoTranscurrido = currentFrame - tiempoInicial; //static_cast<float>(glfwGetTime());
+        //tiempoTranscurrido = currentFrame - tiempoInicial; //static_cast<float>(glfwGetTime());
         // input
         processInput(window);
 
@@ -121,8 +121,10 @@ int main() {
 
         //esfera.display(lightingShader);
         //pEsfera->display(lightingShader);
+        cout << endl << currentFrame;
         for (auto &obj : objetos) {
-            obj->actualizarPosicion(tiempoTranscurrido);
+            obj->actualizarPosicion(currentFrame);
+            cout << "("<< obj->xt << "-" << obj->yt<<")";
             obj->display(lightingShader);
         }
         modelo.display(lightingShader);
@@ -165,15 +167,16 @@ void processInput(GLFWwindow *window) {
             float z = rand()%10;
             Objeto *pE = new Esfera(glm::vec3(x,y,z));
             pE->v0 = 20;
-            pE->a0 = 40 + rand() % 20;
+            pE->a0 = 50 + rand() % 20;
             pE->x0 = x;
             pE->y0 = y;
             pE->vao = esfera.vao;
             pE->indices_size = esfera.indices_size;
+            pE->tiempo_inicial = static_cast<float>(glfwGetTime());
             objetos.emplace_back(pE);
             boton_presionado = false;
             //cout << endl << x << " " << y << " " << z << " " << pE->a0;
-            tiempoInicial = static_cast<float>(glfwGetTime());
+
         }
     }
 

@@ -21,7 +21,8 @@ public:
     GLuint  setup() { return enviar_GPU(); }
     void    display(Shader &sh);
     void    actualizarDatos(float t);
-    void    actualizarPosicion(int tiempo) {}
+    void    actualizarPosicion(float tiempo) {}
+    void    actualizarBS() {}
 };
 
 #endif

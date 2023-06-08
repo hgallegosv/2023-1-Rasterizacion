@@ -9,6 +9,7 @@
 
 Model_PLY::Model_PLY() {
     centro = vec3(0.0);
+    escala = 20;
 }
 
 int Model_PLY::Load(char* filename) {
@@ -122,7 +123,7 @@ int Model_PLY::enviar_GPU() {
 
 void Model_PLY::display(Shader &sh) {
     model = mat4(1.0);
-    model = scale(model, vec3(20));
+    model = scale(model, vec3(escala));
     model = translate(model, centro);
     sh.setMat4("model", model);
     if (true) {
@@ -130,4 +131,23 @@ void Model_PLY::display(Shader &sh) {
         glDrawElements(GL_TRIANGLES, indices_size, GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
     }
+}
+void Model_PLY::obtenerBS(){
+    vec3 maximo = positions[0], minimo = positions[0];
+    for (auto &pos : positions) {
+        maximo.x = pos.x > maximo.x ? pos.x : maximo.x;
+        maximo.y = pos.y > maximo.y ? pos.y : maximo.y;
+        maximo.z = pos.z > maximo.z ? pos.z : maximo.z;
+        minimo.x = pos.x < minimo.x ? pos.x : minimo.x;
+        minimo.y = pos.y < minimo.y ? pos.y : minimo.y;
+        minimo.z = pos.z < minimo.z ? pos.z : minimo.z;
+    }
+    vec3 medio = (maximo + minimo);
+    medio /= 2.0;
+    bs->centro = medio;
+    bs->radio = (maximo-minimo).length() / 2.0;
+}
+void Model_PLY::actualizarBS() {
+    //bs->centro = centro;
+    bs->radio *= escala;
 }

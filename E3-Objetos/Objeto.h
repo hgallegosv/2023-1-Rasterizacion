@@ -23,30 +23,40 @@ public:
     vector<GLuint> indices;
     GLuint indices_size;
     float v0, x0, y0, a0, xt, yt;
-    float tiempo_inicial;
+    float tiempo_inicial = 0;
     GLuint vao;
     mat4 model;
+    vec3 centro;
     bool visible=true;
     BoundingSphere *bs;
+    bool mueve = true;
+    float escala = 20;
     GLint POSITION_ATTRIBUTE=0, NORMAL_ATTRIBUTE=1, TEXCOORD0_ATTRIBUTE=8;
+    Objeto() {
+        bs = new BoundingSphere;
+    }
     virtual GLuint setup()=0;
     virtual void display(Shader &sh)=0;
     virtual void actualizarPosicion(float tiempo)=0;
-    virtual void actualizarBS() = 0;
+    virtual void obtenerBS() {}
+    virtual void actualizarBS() { };
 };
 
 class Esfera:public Objeto{
 public:
-    vec3 centro;
+    //vec3 centro;
     float radius;
     int slices, stacks;
     Esfera() {
+        escala = 0.5;
         centro = vec3(0.0);
     }
     Esfera(vec3 _centro) {
+        escala = 0.5;
         centro = _centro;
     }
     Esfera(vec3 _centro, float _radius, int _slices, int _stacks) {
+        escala = 0.5;
         centro = _centro;
         radius = _radius;
         slices = _slices;

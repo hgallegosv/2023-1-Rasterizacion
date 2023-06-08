@@ -14,7 +14,7 @@ using namespace glm;
 class Model_PLY: public Objeto {
 public:
 	Model_PLY();
-	vec3 centro;
+	//vec3 centro;
     int		Load(char *filename);
     void    imprimir();
     int     enviar_GPU();
@@ -22,7 +22,8 @@ public:
     void    display(Shader &sh);
     void    actualizarDatos(float t);
     void    actualizarPosicion(float tiempo) {}
-    void    actualizarBS() {}
+    void    obtenerBS();
+    void    actualizarBS();
 };
 
 #endif

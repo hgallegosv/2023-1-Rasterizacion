@@ -36,7 +36,7 @@ float tiempoInicial = 0.0f, tiempoTranscurrido = 0.0f;
 glm::vec3 lightPos(1.2f, 30.0f, 2.0f);
 
 Esfera esfera(vec3(0),2., 20, 20);
-Objeto *pEsfera = new Esfera(vec3(0),2, 50, 50);
+Esfera *pEsfera = new Esfera(vec3(0),2, 50, 50);
 Model_PLY modelo;
 vector<Objeto*> objetos;
 bool boton_presionado = false;
@@ -83,11 +83,15 @@ int main() {
     //Shader lightCubeShader("../2.2.light_cube.vs", "../2.2.light_cube.fs");
 
     esfera.setup();
+    modelo.setup();
     //pEsfera->setup();
     pEsfera->vao = esfera.vao;
-    modelo.setup();
-
-    //objetos.emplace_back(pEsfera);
+    modelo.obtenerBS();
+    pEsfera->centro = modelo.bs->centro;
+    pEsfera->radius = modelo.bs->radio;
+    pEsfera->escala = modelo.escala;
+    pEsfera->mueve = false;
+    objetos.emplace_back(pEsfera);
 
     // render loop
     while (!glfwWindowShouldClose(window)) {
@@ -117,7 +121,8 @@ int main() {
         lightingShader.setMat4("view", view);
 
         // world transformation
-        glm::mat4 model = glm::mat4(1.0f);        lightingShader.setMat4("model", model);
+        glm::mat4 model = glm::mat4(1.0f);
+        lightingShader.setMat4("model", model);
 
         //esfera.display(lightingShader);
         //pEsfera->display(lightingShader);
@@ -166,6 +171,7 @@ void processInput(GLFWwindow *window) {
             float y = rand()%10;
             float z = rand()%10;
             Objeto *pE = new Esfera(glm::vec3(x,y,z));
+            pE->centro = vec3(x,y,z);
             pE->v0 = 20;
             pE->a0 = 50 + rand() % 20;
             pE->x0 = x;

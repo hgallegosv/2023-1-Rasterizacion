@@ -71,7 +71,7 @@ GLuint Esfera::setup() {
 
 void Esfera::display(Shader &sh){
     model = mat4(1.0);
-    model = scale(model, vec3(0.5));
+    model = scale(model, vec3(escala));
     //cout << endl << to_string(centro);
     model = translate(model, centro);
     sh.setMat4("model", model);
@@ -82,6 +82,9 @@ void Esfera::display(Shader &sh){
     }
 }
 void Esfera::actualizarPosicion(float t) {
+    if (not mueve) {
+        return;
+    }
     // si no hay intersección calcular nueva posicion
     t = t - tiempo_inicial;
     float g = 9.8;
@@ -92,5 +95,6 @@ void Esfera::actualizarPosicion(float t) {
     centro.y = yt;
 }
 void Esfera::actualizarBS() {
-
+    bs->radio = radius*escala;
+    bs->centro = centro;
 }

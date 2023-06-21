@@ -9,6 +9,12 @@ E2-Iluminacion/cmake-build-debug/*
 
 E3-Objetos/.idea/*
 E3-Objetos/cmake-build-debug/*
+
+E4-texturas/.idea/*
+E4-texturas/cmake-build-debug/*
+
+E5-Curvas/.idea/*
+E5-Curvas/cmake-build-debug/*
 # Prerequisites
 *.d
 

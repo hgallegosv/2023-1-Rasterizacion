@@ -94,9 +94,17 @@ int main() {
     objetos.emplace_back(pEsfera);*/
 
     vector<vec3> puntos;
-    for(float x=-10.0; x < 20.0; x += 0.1){
-        float y = 5*x*x + 3*x + 4;
+    /*for(float x=-10.0; x < 20.0; x += 0.1){
+        //float y = 5*x*x + 3*x + 4;
+        float x4 = x*x*x*x;
+        float y = -3*x*4*x - 7.4*4 + 3.1415*x*x - x -2;
         puntos.emplace_back(vec3(x,y,0));
+    }*/
+    for(float x=-10.0; x < 10.0; x+=0.1){
+        for(float y=-10.0; y < 10.0; y+=0.1){
+            float z = 5 - x*x - y*y;
+            puntos.emplace_back(vec3(x,y,z));
+        }
     }
     GLuint vao_puntos;
     GLint POSITION_ATTRIBUTE=0;

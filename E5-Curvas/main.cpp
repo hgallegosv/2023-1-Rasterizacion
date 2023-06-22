@@ -81,17 +81,17 @@ int main() {
     // build and compile our shader program
     Shader lightingShader("../2.2.basic_lighting.vs", "../2.2.basic_lighting.fs");
     Shader lightCubeShader("../2.2.light_cube.vs", "../2.2.light_cube.fs");
-
+/*
     esfera.setup();
-    modelo.setup();
+    //modelo.setup();
     //pEsfera->setup();
     pEsfera->vao = esfera.vao;
-    modelo.obtenerBS();
+    //modelo.obtenerBS();
     pEsfera->centro = modelo.bs->centro;
     pEsfera->radius = modelo.bs->radio;
     pEsfera->escala = modelo.escala;
     pEsfera->mueve = false;
-    objetos.emplace_back(pEsfera);
+    objetos.emplace_back(pEsfera);*/
 
     vector<vec3> puntos;
     for(float x=-10.0; x < 20.0; x += 0.1){
@@ -106,8 +106,8 @@ int main() {
     glGenBuffers( 1, vbos );
     glBindBuffer( GL_ARRAY_BUFFER, vbos[0] );
     glBufferData( GL_ARRAY_BUFFER, puntos.size() * sizeof(vec3), puntos.data(), GL_STATIC_DRAW );
-    glVertexAttribPointer( POSITION_ATTRIBUTE, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
     glEnableVertexAttribArray( POSITION_ATTRIBUTE );
+    glVertexAttribPointer( POSITION_ATTRIBUTE, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
     glBindVertexArray( 0 );
     glBindBuffer( GL_ARRAY_BUFFER, 0 );
 
@@ -157,7 +157,7 @@ int main() {
         lightCubeShader.setMat4("view", view);
         lightCubeShader.setMat4("model", model);
         glBindVertexArray(vao_puntos);
-        glDrawElements(GL_POINTS, puntos.size(), GL_UNSIGNED_INT, 0);
+        glDrawArrays(GL_POINTS,0, puntos.size());
         glBindVertexArray(0);
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)

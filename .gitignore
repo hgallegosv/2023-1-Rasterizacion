@@ -15,6 +15,9 @@ E4-texturas/cmake-build-debug/*
 
 E5-Curvas/.idea/*
 E5-Curvas/cmake-build-debug/*
+
+E6-Sombras/.idea/*
+E6-Sombras/cmake-build-debug/*
 # Prerequisites
 *.d
 

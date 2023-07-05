@@ -18,6 +18,9 @@ E5-Curvas/cmake-build-debug/*
 
 E6-Sombras/.idea/*
 E6-Sombras/cmake-build-debug/*
+
+E7-NormalMapping/.idea/*
+E7-NormalMapping/cmake-build-debug/*
 # Prerequisites
 *.d
 
